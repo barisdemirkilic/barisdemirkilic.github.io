@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.b079cf4e.js",
+    "main.js": "/static/js/main.7bb5dbeb.js",
     "static/js/453.ea152d6b.chunk.js": "/static/js/453.ea152d6b.chunk.js",
     "static/media/island_of_giresun.jpg": "/static/media/island_of_giresun.640150ac219f3378d392.jpg",
     "static/media/barisdemirkilic_logo.png": "/static/media/barisdemirkilic_logo.4655e860e257d6f12177.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.b079cf4e.js.map": "/static/js/main.b079cf4e.js.map",
+    "main.7bb5dbeb.js.map": "/static/js/main.7bb5dbeb.js.map",
     "453.ea152d6b.chunk.js.map": "/static/js/453.ea152d6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.b079cf4e.js"
+    "static/js/main.7bb5dbeb.js"
   ]
 }
