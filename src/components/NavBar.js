@@ -12,7 +12,7 @@ export default function NavBar() {
 					style={{ height: '100%', width: '50px', cursor: 'pointer' }}
 				>
 					<img
-						src='../images/barisdemirkilic_logo.png'
+						src='./src/images/barisdemirkilic_logo.png'
 						className='containImg'
 					/>
 				</div>

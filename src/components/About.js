@@ -7,7 +7,7 @@ export default function About() {
 			<NavBar />
 			<div style={{ width: '100%', height: '500px' }}>
 				<img
-					src='../images/island_of_giresun.jpg'
+					src='./src/images/islandofgiresun.jpg'
 					className='containImg'
 					style={{ objectFit: 'cover' }}
 				/>
