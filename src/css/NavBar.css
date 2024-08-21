@@ -1,0 +1,16 @@
+#navBar {
+  height: 50px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#navBar > div {
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#navBar > div > span {
+  cursor: pointer;
+}
