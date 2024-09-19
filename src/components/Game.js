@@ -6,9 +6,7 @@ export default function Game() {
 	return (
 		<>
 			<NavBar />
-			<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-				<TicTacToeBoard></TicTacToeBoard>
-			</div>
+			<TicTacToeBoard />
 		</>
 	)
 }
