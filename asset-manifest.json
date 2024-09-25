@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.4a7cf3f8.css",
-    "main.js": "/static/js/main.9b56e857.js",
+    "main.js": "/static/js/main.e013efad.js",
     "static/js/453.ea152d6b.chunk.js": "/static/js/453.ea152d6b.chunk.js",
     "static/media/island_of_giresun.jpg": "/static/media/island_of_giresun.640150ac219f3378d392.jpg",
     "static/media/circle.png": "/static/media/circle.6a1e137289569ff8489a.png",
     "static/media/x.png": "/static/media/x.8a25a095ca33e86f54ab.png",
     "index.html": "/index.html",
     "main.4a7cf3f8.css.map": "/static/css/main.4a7cf3f8.css.map",
-    "main.9b56e857.js.map": "/static/js/main.9b56e857.js.map",
+    "main.e013efad.js.map": "/static/js/main.e013efad.js.map",
     "453.ea152d6b.chunk.js.map": "/static/js/453.ea152d6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a7cf3f8.css",
-    "static/js/main.9b56e857.js"
+    "static/js/main.e013efad.js"
   ]
 }
