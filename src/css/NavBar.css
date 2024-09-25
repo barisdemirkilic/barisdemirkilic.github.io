@@ -2,15 +2,28 @@
   height: 50px;
   font-size: 26px;
   font-weight: bold;
+  padding-top: 30px;
 }
 
-#navBar > div {
-  height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-#navBar > div > span {
-  cursor: pointer;
+#navBar ul li {
+  display: inline-block;
+  border-left: 1px solid white;
+  padding: 0 10px;
+}
+
+#navBar ul li:first-child {
+  border-left: none;
+}
+
+#navBar ul li a {
+  text-decoration: none;
+  color: white;
 }
