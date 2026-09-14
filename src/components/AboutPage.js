@@ -10,7 +10,7 @@ export default function AboutPage() {
 				<p>
 					<span>HI! I'm Baris.</span>
 					<br />
-					<span>Trying to see what can I do...</span>
+					<span>Trying to see what I can do...</span>
 				</p>
 			</div>
 			{/* <div

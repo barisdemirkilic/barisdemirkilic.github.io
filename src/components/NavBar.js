@@ -10,6 +10,9 @@ export default function NavBar() {
 						<a href='/'>About</a>
 					</li>
 					<li>
+						<a href='#/Turkiye'>Turkiye</a>
+					</li>
+					<li>
 						<a href='#/TicTacToe'>Tic Tac Toe</a>
 					</li>
 				</ul>
