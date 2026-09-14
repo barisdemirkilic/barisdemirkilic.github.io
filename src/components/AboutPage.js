@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from './NavBar'
 import island_of_giresun from '../images/island_of_giresun.jpg'
 
-export default function About() {
+export default function AboutPage() {
 	return (
 		<>
 			<NavBar />

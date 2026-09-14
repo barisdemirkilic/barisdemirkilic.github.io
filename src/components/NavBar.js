@@ -10,7 +10,7 @@ export default function NavBar() {
 						<a href='/'>About</a>
 					</li>
 					<li>
-						<a href='#/Game'>Game</a>
+						<a href='#/TicTacToe'>Tic Tac Toe</a>
 					</li>
 				</ul>
 			</div>
