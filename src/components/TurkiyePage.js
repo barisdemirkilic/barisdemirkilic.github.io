@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from './NavBar'
+import turkiyeSvgUrl from './images/turkiye.svg'
 
 export default function TurkiyePage() {
-	const [turkiyeSvg, setTurkiyeSvg] = useState()
+	const [turkiyeSvg, setTurkiyeSvg] = useState('')
 
 	useEffect(() => {
-		fetch('../images/turkiye.svg')
+		fetch(turkiyeSvgUrl)
 			.then((response) => response.text())
 			.then((text) => setTurkiyeSvg(text))
 	}, [])

@@ -9,7 +9,7 @@ export default function App() {
 		<HashRouter>
 			<Routes>
 				<Route exact path='/' element={<AboutPage />} />
-				<Route exact path='/TicTacToe' element={<TurkiyePage />} />
+				<Route exact path='/Turkiye' element={<TurkiyePage />} />
 				<Route exact path='/TicTacToe' element={<TicTacToePage />} />
 			</Routes>
 		</HashRouter>
