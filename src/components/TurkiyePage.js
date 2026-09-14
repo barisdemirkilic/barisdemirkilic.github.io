@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from './NavBar'
-import turkiyeSvgUrl from './images/turkiye.svg'
+import turkiyeSvgUrl from '../images/turkiye.svg'
 
 export default function TurkiyePage() {
 	const [turkiyeSvg, setTurkiyeSvg] = useState('')
