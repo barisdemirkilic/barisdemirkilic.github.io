@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar'
 import island_of_giresun from '../images/island_of_giresun.jpg'
+import Version from './Version'
 
 export default function AboutPage() {
 	return (
@@ -25,6 +26,7 @@ export default function AboutPage() {
 			{/* <video autoPlay loop muted>
         <source src="../../static/videos/Antmedia-Web.mp4" type="video/mp4" />
       </video> */}
+			<Version />
 		</>
 	)
 }

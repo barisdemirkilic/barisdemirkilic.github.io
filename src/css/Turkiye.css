@@ -1,12 +1,12 @@
-.province {
+path {
 	cursor: pointer;
 	transition: fill 0.2s;
 }
 
-.province:hover {
+path:hover {
 	fill: #aaa !important;
 }
 
-.province.selected {
+path.selected {
 	fill: #f59e0b !important;
 }
