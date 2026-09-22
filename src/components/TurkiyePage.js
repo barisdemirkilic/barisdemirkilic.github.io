@@ -91,8 +91,10 @@ export default function TurkiyePage() {
 		<>
 			<NavBar />
 			<div style={{ width: '100%', display: 'flex' }}>
-				<div>
-					<span>{`${visitedProvinces.size}/${totalProvinceCount}`}</span>
+				<div style={{ marginLeft: '50px' }}>
+					<span
+						style={{ fontSize: '50px', color: '#fff8dc' }}
+					>{`${visitedProvinces.size}/${totalProvinceCount}`}</span>
 				</div>
 			</div>
 			<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
