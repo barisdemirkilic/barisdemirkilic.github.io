@@ -3,6 +3,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom'
 import AboutPage from './AboutPage'
 import TicTacToePage from './TicTacToePage'
 import TurkiyePage from './TurkiyePage'
+import { ToastContainer } from 'react-toastify'
 
 export default function App() {
 	return (
@@ -12,6 +13,7 @@ export default function App() {
 				<Route exact path='/Turkiye' element={<TurkiyePage />} />
 				<Route exact path='/TicTacToe' element={<TicTacToePage />} />
 			</Routes>
+			<ToastContainer />
 		</HashRouter>
 	)
 }

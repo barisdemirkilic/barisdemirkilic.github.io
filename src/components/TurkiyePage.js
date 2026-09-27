@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import turkiyeSvgUrl from '../images/turkiye.svg'
 import '../css/Turkiye.css'
 import Version from './Version'
+import { toast } from 'react-toastify'
 
 export default function TurkiyePage() {
 	const visitedProvincesStorageKey = 'VisitedProvinces'
@@ -11,6 +12,7 @@ export default function TurkiyePage() {
 	const [turkiyeSvg, setTurkiyeSvg] = useState('')
 	const [visitedProvinces, setVisitedProvinces] = useState(new Set())
 	const [hoveredProvince, setHoveredProvince] = useState()
+	const [canHover, setCanHover] = useState(true)
 
 	const mapRef = useRef(null)
 
@@ -21,6 +23,8 @@ export default function TurkiyePage() {
 			setTurkiyeSvg(turkiyeSvgText)
 		}
 		loadAsync()
+		const mediaQuery = window.matchMedia('(hover: hover)')
+		setCanHover(mediaQuery.matches)
 	}, [])
 
 	useEffect(() => {
@@ -37,21 +41,24 @@ export default function TurkiyePage() {
 
 		if (!path) return
 
-		setVisitedProvinces((prev) => {
-			const next = new Set(prev)
-
-			if (next.has(path.id)) {
-				next.delete(path.id)
-			} else {
-				next.add(path.id)
-			}
-
-			localStorage.setItem(
-				visitedProvincesStorageKey,
-				JSON.stringify(Array.from(next)),
-			)
-			return next
-		})
+		const provinceName = path.getAttribute('name')
+		const wasVisited = visitedProvinces.has(path.id)
+		const next = new Set(visitedProvinces)
+		if (wasVisited) {
+			next.delete(path.id)
+		} else {
+			next.add(path.id)
+		}
+		setVisitedProvinces(next)
+		localStorage.setItem(
+			visitedProvincesStorageKey,
+			JSON.stringify(Array.from(next)),
+		)
+		if (wasVisited) {
+			toast.error(`${provinceName} has been removed from your visited list`)
+		} else {
+			toast.success(`${provinceName} has been added to your visited list`)
+		}
 	}
 
 	useEffect(() => {
@@ -90,10 +97,13 @@ export default function TurkiyePage() {
 	return (
 		<>
 			<NavBar />
-			<div style={{ width: '100%', display: 'flex' }}>
-				<div style={{ marginLeft: '50px' }}>
+			<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+				<div>
 					<span
-						style={{ fontSize: '50px', color: '#fff8dc' }}
+						style={{
+							fontSize: 'clamp(30px, 5vw, 50px)',
+							color: '#fff8dc',
+						}}
 					>{`${visitedProvinces.size}/${totalProvinceCount}`}</span>
 				</div>
 			</div>
@@ -101,8 +111,8 @@ export default function TurkiyePage() {
 				<div
 					ref={mapRef}
 					onClick={handleClick}
-					onMouseMove={handleMouseMove}
-					onMouseLeave={handleMouseLeave}
+					onMouseMove={canHover ? handleMouseMove : undefined}
+					onMouseLeave={canHover ? handleMouseLeave : undefined}
 					dangerouslySetInnerHTML={{ __html: turkiyeSvg }}
 					className='map-container'
 				/>
