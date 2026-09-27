@@ -104,6 +104,7 @@ export default function TurkiyePage() {
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
 					dangerouslySetInnerHTML={{ __html: turkiyeSvg }}
+					className='map-container'
 				/>
 				{hoveredProvince && (
 					<div
