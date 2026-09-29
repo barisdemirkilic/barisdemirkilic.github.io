@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4fe5083a.css",
-    "main.js": "/static/js/main.baf32ad6.js",
+    "main.css": "/static/css/main.9442d943.css",
+    "main.js": "/static/js/main.441690f1.js",
     "static/js/453.ea152d6b.chunk.js": "/static/js/453.ea152d6b.chunk.js",
     "static/media/island_of_giresun.jpg": "/static/media/island_of_giresun.640150ac219f3378d392.jpg",
-    "static/media/turkiye.svg": "/static/media/turkiye.20604b10e7ef570578ab5da31db44263.svg",
+    "static/media/turkiye.svg": "/static/media/turkiye.71e2923698a4075cda9b3f32690cda80.svg",
     "static/media/circle.png": "/static/media/circle.6a1e137289569ff8489a.png",
     "static/media/x.png": "/static/media/x.8a25a095ca33e86f54ab.png",
     "index.html": "/index.html",
-    "main.4fe5083a.css.map": "/static/css/main.4fe5083a.css.map",
-    "main.baf32ad6.js.map": "/static/js/main.baf32ad6.js.map",
+    "main.9442d943.css.map": "/static/css/main.9442d943.css.map",
+    "main.441690f1.js.map": "/static/js/main.441690f1.js.map",
     "453.ea152d6b.chunk.js.map": "/static/js/453.ea152d6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fe5083a.css",
-    "static/js/main.baf32ad6.js"
+    "static/css/main.9442d943.css",
+    "static/js/main.441690f1.js"
   ]
 }
