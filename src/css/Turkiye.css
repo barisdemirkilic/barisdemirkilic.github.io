@@ -11,6 +11,11 @@ path.selected {
 	fill: #f59e0b !important;
 }
 
+.map-container {
+	width: 100%;
+	max-width: 1000px;
+}
+
 .map-container svg {
 	width: 100%;
 	height: auto;
