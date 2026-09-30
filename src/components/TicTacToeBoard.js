@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import x from '../images/x.png'
-import circle from '../images/circle.png'
+import xMark from '../images/x.png'
+import circleMark from '../images/circle.png'
 import '../css/Button.css'
+
+const checkeredBoardLightColor = '#F2E8E7'
+const checkeredBoardDarkColor = '#A3524E'
 
 const enumGameResult = {
   isNotStarted: 0,
@@ -280,51 +283,37 @@ export default function TicTacToeBoard() {
       >
         <div
           style={{
-            width: '500px',
-            height: '500px',
-            backgroundColor: '#8d4009',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-around',
+            width: 'min(500px, 90vw)',
+            aspectRatio: '1 / 1',
+            display: 'grid',
+            gridTemplateColumns: `repeat(${boardArr.length}, 1fr)`,
+            gridTemplateRows: `repeat(${boardArr.length}, 1fr)`,
           }}
         >
-          {boardArr.map((rowArr, i) => {
-            return (
+          {boardArr.map((rowArr, i) =>
+            rowArr.map((cell, j) => (
               <div
-                key={`row${i}`}
+                key={`${i}_${j}`}
                 style={{
-                  display: 'flex',
-                  justifyContent: 'space-around',
-                  width: '100%',
-                  height: '150px',
+                  cursor:
+                    gameResult === enumGameResult.resuming
+                      ? 'pointer'
+                      : undefined,
+                  backgroundColor:
+                    (i + j) % 2 === 0
+                      ? checkeredBoardLightColor
+                      : checkeredBoardDarkColor,
+                  backgroundImage:
+                    cell === 0
+                      ? undefined
+                      : `url(${cell === enumPlayer.player1 ? xMark : circleMark})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                 }}
-              >
-                {rowArr.map((cell, j) => {
-                  return (
-                    <div
-                      key={`${i}_${j}`}
-                      value={cell}
-                      style={{
-                        height: '100%',
-                        width: '150px',
-                        cursor:
-                          gameResult == enumGameResult.resuming
-                            ? 'pointer'
-                            : undefined,
-                        backgroundColor: '#d77e42',
-                        backgroundImage:
-                          cell == 0
-                            ? undefined
-                            : `url(${cell == enumPlayer.player1 ? x : circle})`,
-                        backgroundSize: 'cover',
-                      }}
-                      onClick={(e) => onSquareClick(e, `${i}_${j}`)}
-                    ></div>
-                  )
-                })}
-              </div>
-            )
-          })}
+                onClick={(e) => onSquareClick(e, `${i}_${j}`)}
+              />
+            )),
+          )}
         </div>
       </div>
     </>
